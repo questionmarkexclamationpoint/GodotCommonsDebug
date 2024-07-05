@@ -1,0 +1,3 @@
+[submodule "src/Commons"]
+	path = src/Commons
+	url = ssh://github.com/questionmarkexclamationpoint/GodotCommons

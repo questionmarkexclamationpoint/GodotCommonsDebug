@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjplidv0msbor"]
+
+[ext_resource type="Script" path="res://src/Game/NormalizeDebug.cs" id="1_2nrk7"]
+
+[node name="NormalizeDebug" type="Node2D"]
+scale = Vector2(100, 100)
+script = ExtResource("1_2nrk7")
+metadata/_edit_lock_ = true
