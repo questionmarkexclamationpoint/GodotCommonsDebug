@@ -1,8 +1,6 @@
 using Godot;
 using System;
-using Commons;
-
-//namespace Game;
+using QuestionMarkExclamationPoint.Commons;
 
 [Tool]
 public partial class NormalizeDebug : Node2D {
@@ -136,14 +134,7 @@ public partial class NormalizeDebug : Node2D {
     }
 }
 
-public delegate float Normalizer(
-            float value,
-            float min = -1,
-            float max = 1,
-            float shift = 0,
-            float squeeze = 0,
-            bool clamp = false
-);
+public delegate float Normalizer(float value);
 
 public enum NormalizationStrategy {
     TANH,
@@ -159,12 +150,12 @@ public static class NormalizationStrategyExtensions {
             float squeeze = 0,
             bool clamp = false
     ) {
-        return name.Normalizer()(value, min, max, shift, squeeze, clamp);
+        return name.Normalizer()(value);
     }
 
     private static Normalizer Normalizer(this NormalizationStrategy name) {
         return name switch {
-            NormalizationStrategy.TANH => Normalize.Tanh,
+            NormalizationStrategy.TANH => (value) => Normalize.Tanh(value),
             NormalizationStrategy.SIGMOID => Normalize.Sigmoid,
             _ => throw new NotImplementedException()
         };

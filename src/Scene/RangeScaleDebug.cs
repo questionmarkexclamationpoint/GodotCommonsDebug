@@ -1,8 +1,6 @@
 using Godot;
-using Commons;
 using System;
-
-//namespace Game;
+using Range = QuestionMarkExclamationPoint.Commons.Range;
 
 [Tool]
 public partial class RangeScaleDebug : Node2D {
@@ -91,5 +89,5 @@ public partial class RangeScaleDebug : Node2D {
 
     }
 
-    private float Compute(float value) => RangeScale.Map(value, InMin, InMid, InMax, OutMin, OutMid, OutMax);
+    private float Compute(float value) => Range.Map(value, (InMin, InMid, InMax), (OutMin, OutMid, OutMax));
 }

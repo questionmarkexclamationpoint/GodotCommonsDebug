@@ -1,0 +1,12 @@
+﻿<Project Sdk="Godot.NET.Sdk/4.2.2">
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <EnableDynamicLoading>true</EnableDynamicLoading>
+        <RootNamespace>QuestionMarkExclamationPoint.Commons.VisualDebug</RootNamespace>
+    </PropertyGroup>
+
+
+    <ItemGroup>
+        <PackageReference Include="QuestionMarkExclamationPoint.Commons" Version="0.2.0" />
+    </ItemGroup>
+</Project>

@@ -1,11 +1,11 @@
 using Godot;
-using Commons;
+using QuestionMarkExclamationPoint.Commons;
 using System;
-
-//namespace Game;
 
 [Tool]
 public partial class RandomizeDebug : Node2D {
+    private readonly Random random = new();
+
     int pointCount = 10;
     [Export]
     int PointCount {
@@ -50,8 +50,8 @@ public partial class RandomizeDebug : Node2D {
         DrawLine(new(MinValue, 0), new(MaxValue, 0), Colors.Black, 0.01f);
         for (int i = 0; i < PointCount; i++) {
             var value = UseIntegers
-                ? Randomize.RandomRangeInt((int)Math.Ceiling(MinValue), (int)Math.Floor(MaxValue))
-                : Randomize.RandomRange(MinValue, MaxValue);
+                ? random.NextIntInRange((int)Math.Ceiling(MinValue), (int)Math.Floor(MaxValue))
+                : random.NextFloatInRange(MinValue, MaxValue);
             DrawCircle(new(value, 0), 0.025f, Colors.Black);
         }
     }

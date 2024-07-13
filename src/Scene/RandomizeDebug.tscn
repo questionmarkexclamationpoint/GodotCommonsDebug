@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://dbwa2016p27ay"]
 
-[ext_resource type="Script" path="res://src/Game/RandomizeDebug.cs" id="1_hwbkl"]
+[ext_resource type="Script" path="res://src/Scene/RandomizeDebug.cs" id="1_c4p4p"]
 
 [node name="RandomizeDebug" type="Node2D"]
 scale = Vector2(100, 100)
-script = ExtResource("1_hwbkl")
+script = ExtResource("1_c4p4p")
 metadata/_edit_lock_ = true
