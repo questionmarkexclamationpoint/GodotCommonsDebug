@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="CommonsDebug"
+config/name="CommonsVisualDebug"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 config/icon="res://assets/icon.svg"
 
 [dotnet]
 
-project/assembly_name="./VisualDebug"
+project/assembly_name="./CommonsVisualDebug"
